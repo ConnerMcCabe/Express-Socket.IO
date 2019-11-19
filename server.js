@@ -1,11 +1,15 @@
-const express = require('express')
-
-const app = express();
+const app = require('express')();
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
-})
+});
 
-app.listen(3000, function() {
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
+
+http.listen(3000, function() {
   console.log('Listening on port 3000');
 })
