@@ -21,6 +21,7 @@ io.on('connection', function(socket) {
 
   //send messages
   socket.on('send message', function(data){
+    console.log(data)
     io.sockets.emit('new message', {msg: data});
   })
   })
