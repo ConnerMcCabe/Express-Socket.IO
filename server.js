@@ -15,8 +15,15 @@ io.on('connection', function(socket) {
   console.log('Connected: %s sockets connected', connections.length);
 
   //disconnect
-  connections.splice(connections.indexOf(socket), 1);
-  console.log('Disconnected: %s sockets connected', connections.length)
+  socket.on('disconnect', function(data) {
+    connections.splice(connections.indexOf(socket), 1);
+    console.log('Disconnected: %s sockets connected', connections.length)
+
+  //send messages
+  socket.on('send message', function(data){
+    io.sockets.emit('new message', {msg: data});
+  })
+  })
 })
 
 
