@@ -1,24 +1,24 @@
-body { 
+body {
     height: 100%;
     width: 100%;
-    margin-top: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
     justify-content: center;
-    background-color: green;
-    
-}
+  }
 
-.message-container {
-    background-color: orange;
+  #message-container {
     width: 80%;
     max-width: 1200px;
-}
+  }
 
-#send-container {
+  #send-container {
     position: fixed;
-    padding-bottom: 30px;
+    padding-bottom: 500px;
     bottom: 0;
     background-color: white;
     max-width: 1200px;
     width: 80%;
     display: flex;
-}
+  }
+

@@ -3,20 +3,17 @@
 <head>
   <title>Socket.IO chat</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
-  <!-- <link rel="stylesheet" type="text/css" src="./style.css"> -->
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 </head>
   <body>
-    <div class="message-container">  
-      <div id="chat"></div>
-        <form id="send-container">
-            <textarea id="message"></textarea>
-            <br />
-            <input type="submit" value="Send Message" />
-        </form>
-      </div>
+    <div class="chatbox">  
+      <div id="message-container"></div>
+       <br />
+      <form id="send-container">
+          <input type="text" id="message-input"  />
+          <br />
+          <input type="submit" id="send-button" value="Send" />
+      </form>
     </div>
-    
-  
   </body>
 </html>
