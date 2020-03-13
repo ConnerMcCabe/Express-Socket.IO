@@ -1,7 +1,24 @@
 body { 
-    height: fit-content;
-    width: fit-content;
-    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    justify-content: center;
+    background-color: blue;
     
 }
 
+.message-container {
+    background-color: orange;
+    width: 80%;
+    max-width: 1200px;
+}
+
+#send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    bottom: 0;
+    background-color: white;
+    max-width: 1200px;
+    width: 80%;
+    display: flex;
+}
