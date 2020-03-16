@@ -9,12 +9,13 @@ body {
 
   #message-container {
     width: 80%;
+    
     max-width: 1200px;
   }
 
   #send-container {
     position: fixed;
-    padding-bottom: 500px;
+    padding-bottom: 20%;
     bottom: 0;
     background-color: white;
     max-width: 1200px;
