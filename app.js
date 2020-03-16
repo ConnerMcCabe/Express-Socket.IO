@@ -4,8 +4,14 @@ const messageInput = document.getElementById('message-input')
 const messageContainer = document.getElementById('message-container')
 
 const name = prompt('choose a name')
-appendMessage('you joined')
+
+appendMessage(`${name} joined`)
 socket.emit('new-user', name)
+
+socket.on('user-connected', name => { 
+    appendMessage(`${name} connected`)
+})
+
 socket.on('chat-message', data => { 
     appendMessage(data)
 })

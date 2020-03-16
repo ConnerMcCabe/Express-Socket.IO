@@ -4,13 +4,14 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   #message-container {
-    width: 80%;
-    
+    width: 80vmin;
     max-width: 1200px;
+    background-color: lightgrey;
+
   }
 
   #send-container {
@@ -23,3 +24,6 @@ body {
     display: flex;
   }
 
+  #message-input {
+    width: 70vmin;
+  }

@@ -1,19 +1,14 @@
-const app = require('express')();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')(5000)
 
 const users = {}
 
 io.on('connection', socket => {
-  socket.on('new-user' name => {
-    
+  socket.on('new-user', name => {
+    users[socket.id] = name
+    socket.broadcast.emit('user-connected', name)
   })
   socket.on('send-chat-message', message => {
-    console.log(message)
-    socket.broadcast.emit
+    socket.broadcast.emit('chat-message', message)
   })
 })
 
-http.listen(5000, function() {
-  console.log('Listening on port 5000');
-})
