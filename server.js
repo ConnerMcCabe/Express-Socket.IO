@@ -3,9 +3,9 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
 io.on('connection', socket => {
-  socket.emit('chat-message', "holla");
   socket.on('send-chat-message', message => {
-     console.log(message)
+    console.log(message)
+    socket.broadcast.emit
   })
 })
 
