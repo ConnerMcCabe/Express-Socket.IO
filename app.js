@@ -5,15 +5,15 @@ const messageContainer = document.getElementById('message-container')
 
 const name = prompt('choose a name')
 
-appendMessage(`${name} connected`)
+appendMessage(`${name}: connected`)
 socket.emit('new-user', name)
 
 socket.on('user-connected', name => { 
-    appendMessage(`${name} connected`)
+    appendMessage(`${name}: connected`)
 })
 
 socket.on('user-disconnected', name => { 
-    appendMessage(`${name} disconnected`)
+    appendMessage(`${name}: disconnected`)
 })
 
 socket.on('chat-message', data => { 
